@@ -1,0 +1,113 @@
+# Extended Python Libraries for Tech Art & Game Development
+# Install with: pip install -r requirements_extended.txt
+
+# ============================================
+# PROCEDURAL GENERATION & NOISE
+# ============================================
+noise>=1.2.2                    # Perlin/Simplex noise generation
+opensimplex>=0.4.5              # OpenSimplex noise
+Noise>=1.2.2                    # Various noise algorithms
+
+# ============================================
+# 3D FILE FORMATS & INTEROP
+# ============================================
+pygltflib>=1.16.0               # glTF 2.0 reader/writer
+pywavefront>=1.3.3              # OBJ file loader
+plyfile>=1.0.0                  # PLY mesh format
+pyassimp>=1.0.0                 # Asset Import Library (FBX, Collada, etc.)
+# USD (Universal Scene Description) - install separately: pip install usd-core
+
+# ============================================
+# TEXTURE & IMAGE PROCESSING
+# ============================================
+opencv-python>=4.8.0            # Computer vision and image processing
+imageio>=2.31.0                 # Read/write image formats including HDR
+imageio-ffmpeg>=0.4.9           # Video I/O
+scikit-image>=0.22.0            # Advanced image processing algorithms
+Wand>=0.6.13                    # ImageMagick binding (needs ImageMagick installed)
+
+# ============================================
+# COLOR SCIENCE & GRADING
+# ============================================
+colour-science>=0.4.4           # Color science computations
+colorspacious>=1.1.2            # Color space conversions
+colormath>=3.0.0                # Color difference calculations
+
+# ============================================
+# ANIMATION & INTERPOLATION
+# ============================================
+bezier>=2023.7.28               # Bezier curve calculations
+scipy>=1.11.0                   # Includes interpolation (already in base requirements)
+
+# ============================================
+# GAME ENGINE INTEGRATION
+# ============================================
+# unreal-engine-python (manual install for UE)
+# panda3d>=1.10.14              # Open-source game engine
+ursina>=6.0.0                   # Simplified game engine (built on Panda3D)
+
+# ============================================
+# AUDIO PROCESSING
+# ============================================
+pydub>=0.25.1                   # Audio manipulation
+soundfile>=0.12.1               # Read/write audio files
+librosa>=0.10.0                 # Audio analysis
+
+# ============================================
+# DATA VISUALIZATION
+# ============================================
+matplotlib>=3.8.0               # 2D plotting
+plotly>=5.17.0                  # Interactive plots
+seaborn>=0.13.0                 # Statistical visualization
+
+# ============================================
+# NETWORKING & MULTIPLAYER
+# ============================================
+websockets>=12.0                # WebSocket client/server
+python-osc>=1.8.3               # OSC (Open Sound Control) protocol
+pyzmq>=25.1.0                   # ZeroMQ messaging
+
+# ============================================
+# PERFORMANCE & PROFILING
+# ============================================
+line-profiler>=4.1.0            # Line-by-line profiling
+memory-profiler>=0.61.0         # Memory usage tracking
+py-spy>=0.3.14                  # Sampling profiler
+numba>=0.58.0                   # JIT compiler for numerical code
+
+# ============================================
+# MATH & GEOMETRY UTILITIES
+# ============================================
+pyrr>=0.10.3                    # 3D math (vectors, matrices, quaternions)
+shapely>=2.0.0                  # 2D geometry manipulation
+rtree>=1.1.0                    # Spatial indexing
+
+# ============================================
+# SHADER & GPU COMPUTING
+# ============================================
+pyopencl>=2023.1.4              # OpenCL bindings (GPU compute)
+cupy>=12.3.0                    # NumPy-compatible GPU arrays (CUDA required)
+moderngl>=5.8.0                 # Modern OpenGL wrapper
+
+# ============================================
+# DEVELOPMENT UTILITIES
+# ============================================
+rich>=13.7.0                    # Beautiful terminal output
+tqdm>=4.66.0                    # Progress bars
+click>=8.1.7                    # CLI creation framework
+typer>=0.9.0                    # Modern CLI framework
+pydantic>=2.5.0                 # Data validation
+dacite>=1.8.1                   # Dataclass utilities
+
+# ============================================
+# JUPYTER & INTERACTIVE DEVELOPMENT
+# ============================================
+jupyter>=1.0.0                  # Jupyter notebook
+ipython>=8.18.0                 # Enhanced Python shell
+ipywidgets>=8.1.0               # Interactive widgets
+
+# ============================================
+# DOCUMENTATION
+# ============================================
+sphinx>=7.2.6                   # Documentation generator
+sphinx-rtd-theme>=2.0.0         # ReadTheDocs theme
