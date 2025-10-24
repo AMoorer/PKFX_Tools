@@ -1,38 +1,20 @@
+# MakeSomeNoise - Procedural Noise Generator
+# Minimal requirements for running the application
+
 # UI Framework
 PySide6>=6.6.0
 
-# 3D Graphics & Math
+# Core Dependencies
 numpy>=1.26.0
-scipy>=1.11.0
 Pillow>=10.0.0
-
-# Linear Algebra & Physics
-pymunk>=6.6.0          # 2D physics engine
-pybullet>=3.2.5        # 3D physics simulation
-
-# 3D Processing & Geometry
-trimesh>=4.0.0         # 3D mesh processing
-PyOpenGL>=3.1.7        # OpenGL bindings
-PyOpenGL-accelerate>=3.1.7
-
-# VR/XR Development
-openvr>=1.26.0         # OpenVR bindings (SteamVR/OpenXR compat)
-
-# File Management & Utilities
-pathlib2>=2.3.7        # Enhanced path handling (backport)
-Send2Trash>=1.8.0      # Safe file deletion
-watchdog>=3.0.0        # File system monitoring
-
-# Data Serialization
-pyaml>=23.0.0
-toml>=0.10.2
 
 # Procedural Noise Libraries
 noise>=1.2.2           # Perlin noise
 opensimplex>=0.4.5     # Simplex noise
-perlin-noise>=1.12     # FBM noise
+perlin-noise>=1.12     # Additional noise algorithms
 
-# Development Tools
-black>=23.0.0          # Code formatter
-pylint>=3.0.0          # Linter
-pytest>=7.4.0          # Testing framework
+# Development Tools (Optional)
+# Uncomment if doing development work:
+# black>=23.0.0        # Code formatter
+# pylint>=3.0.0        # Linter
+# pytest>=7.4.0        # Testing framework

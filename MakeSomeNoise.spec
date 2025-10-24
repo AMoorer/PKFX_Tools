@@ -7,7 +7,7 @@ import PySide6
 pyside6_path = Path(PySide6.__file__).parent
 
 a = Analysis(
-    ['tools\\noise_generator_gui.py'],
+    ['src\\makesomenoise\\noise_generator_gui.py'],
     pathex=[],
     binaries=[],
     datas=[

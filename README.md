@@ -8,14 +8,16 @@ A powerful, user-friendly GUI tool for generating seamless procedural noise text
 
 ### ✨ Features
 
-- **7 Noise Types**: Perlin, Simplex, FBM, Turbulence, Ridged Multifractal, Domain Warp, 3D Slice
+- **6 Noise Algorithms**: Perlin, Simplex, FBM, Turbulence, Ridged Multifractal, Domain Warp
 - **Seamless Tiling**: Industry-standard offset-based blending for perfect texture tiling
-- **Dual Layer Mixing**: Blend two noise types with multiple blend modes (Mix, Add, Multiply, Screen, Overlay)
-- **Real-Time Preview**: Live 256×256 preview with adjustable parameters
-- **Animation Support**: Generate animated texture atlases with customizable frame counts and layouts
-- **Batch Export**: Export at any resolution (up to 4096×4096) in PNG or TIFF format
+- **Dual Layer Blending**: Mix two noise types with 7 blend modes (Mix, Add, Multiply, Screen, Overlay, Min, Max)
+- **Real-Time Preview**: Live preview with adjustable parameters and smooth animation playback
+- **Animation Support**: Generate animated texture atlases or frame sequences with Z-offset progression
+- **Multiple Export Formats**: Single frame, animation atlas, or file sequence
 - **3D Offset Controls**: Navigate through noise space with X/Y/Z offsets and adjustable sensitivity
-- **Preview Seams**: Visual verification tool to ensure seamless tiling
+- **Preview Verification**: Center Seams mode to inspect seamless tiling quality
+- **Automatic Versioning**: Incremental version numbers (_v00, _v01...) prevent overwriting
+- **Educational Guide**: Built-in comprehensive guide with detailed algorithm explanations and history
 
 ### 📥 Download
 
@@ -36,24 +38,24 @@ git clone https://github.com/AMoorer/PKFX_Tools.git
 cd PKFX_Tools
 
 # Run setup script (creates venv and installs dependencies)
-.\setup_env.ps1
+.\scripts\setup_env.ps1
 
 # Launch the GUI
-.\run_noise_gui.ps1
+.\scripts\run_noise_gui.ps1
 ```
 
 #### Build Executable
 
 ```powershell
 # Quick build
-.\build_executable.ps1
+.\scripts\build_executable.ps1
 
 # Or manually
 .\venv\Scripts\Activate.ps1
 pyinstaller MakeSomeNoise.spec --clean
 ```
 
-See [BUILD_README.md](BUILD_README.md) for detailed build instructions and troubleshooting.
+See [docs/BUILD_README.md](docs/BUILD_README.md) for detailed build instructions and troubleshooting.
 
 ### 📖 Usage
 
@@ -104,7 +106,8 @@ See [BUILD_README.md](BUILD_README.md) for detailed build instructions and troub
 | **Turbulence** | Absolute value FBM | Fire, smoke, energy effects |
 | **Ridged** | Inverted ridges | Mountain ridges, veins |
 | **Domain Warp** | Warped noise space | Twisted, organic patterns |
-| **3D Slice** | Slice through 3D noise | Animated flowing textures |
+
+*All noise types support 3D offset animation for temporal continuity*
 
 ### 🐛 Troubleshooting
 
@@ -126,14 +129,29 @@ See [BUILD_README.md](BUILD_README.md) for detailed build instructions and troub
 
 ```
 PKFX_Tools/
-├── tools/
-│   └── noise_generator_gui.py    # Main application
-├── build_executable.ps1           # Build script
-├── MakeSomeNoise.spec            # PyInstaller config
-├── BUILD_README.md               # Build documentation
-├── TROUBLESHOOT_EXE.md          # Troubleshooting guide
-├── requirements.txt              # Python dependencies
-└── README.md                     # This file
+├── src/
+│   └── makesomenoise/
+│       ├── __init__.py
+│       ├── __main__.py
+│       ├── noise_generator_gui.py   # Main application
+│       └── version.py
+├── scripts/
+│   ├── build_executable.ps1         # Build script
+│   ├── run_noise_gui.ps1           # Launch script
+│   └── setup_env.ps1               # Environment setup
+├── docs/
+│   ├── README.md                   # Documentation hub
+│   ├── BUILD_README.md             # Build instructions
+│   ├── CHANGELOG.md                # Version history
+│   ├── ROADMAP.md                  # Future plans
+│   ├── TROUBLESHOOT_EXE.md         # Troubleshooting
+│   └── archive/                    # Legacy files
+├── tests/                          # Future test suite
+├── .github/                        # GitHub workflows
+├── MakeSomeNoise.spec             # PyInstaller config
+├── requirements.txt               # Dependencies
+├── LICENSE                        # License information
+└── README.md                      # This file
 ```
 
 ### 🤝 Contributing
@@ -161,5 +179,7 @@ See [LICENSE](LICENSE) file for details.
 
 ---
 
-**Version**: 1.0.0  
-**Last Updated**: October 2025
+**Version**: 1.1.2  
+**Last Updated**: October 24, 2025
+
+See [docs/CHANGELOG.md](docs/CHANGELOG.md) for version history and release notes.

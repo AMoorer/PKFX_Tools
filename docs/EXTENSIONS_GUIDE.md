@@ -1,6 +1,10 @@
-# Recommended VS Code/Windsurf Extensions
+# Recommended VS Code/Windsurf Extensions for MakeSomeNoise
 
-## Python Development (Essential)
+This guide lists essential and recommended extensions for developing MakeSomeNoise.
+
+## Essential Extensions
+
+### Python Development (Required)
 
 ### **Python** (Microsoft)
 - IntelliSense, linting, debugging, code navigation
@@ -24,23 +28,7 @@
 
 ---
 
-## 3D Graphics & Shaders
-
-### **Shader languages support**
-- HLSL/GLSL syntax highlighting and IntelliSense
-- Extension ID: `slevesque.shader`
-
-### **GLSL Lint**
-- Shader validation
-- Extension ID: `dtoplak.vscode-glsllint`
-
-### **Hex Editor**
-- For binary file inspection (3D models, textures)
-- Extension ID: `ms-vscode.hexeditor`
-
----
-
-## File Management & Utilities
+## Productivity & File Management
 
 ### **Path Intellisense**
 - Autocomplete file paths
@@ -56,23 +44,7 @@
 
 ---
 
-## VR/XR Development
-
-### **C/C++** (Microsoft)
-- For native VR SDK development
-- Extension ID: `ms-vscode.cpptools`
-
-### **CMake Tools**
-- If building native VR components
-- Extension ID: `ms-vscode.cmake-tools`
-
-### **XML Tools**
-- For Android manifest editing (Quest deployment)
-- Extension ID: `dotjoshjohnson.xml`
-
----
-
-## Data & Configuration
+## Configuration & Data Files
 
 ### **YAML**
 - YAML syntax support and validation
@@ -132,15 +104,15 @@
 
 ---
 
-## Meta Quest Specific
+## Image & Visual Tools
 
-### **Android Debug Bridge (ADB)**
-- For Quest device debugging
-- Extension ID: `adelphes.android-dev-ext`
+### **Image Preview**
+- Preview images in hover tooltips
+- Extension ID: `kisstkondoros.vscode-gutter-preview`
 
-### **APK Tools**
-- If packaging for Quest
-- Consider using Android Studio integration
+### **Color Highlight**
+- Highlight color codes in your code
+- Extension ID: `naumovs.color-highlight`
 
 ---
 
@@ -154,6 +126,30 @@
 - CSV file visualization
 - Extension ID: `mechatroner.rainbow-csv`
 
-### **Image Preview**
-- Preview images in hover tooltips
-- Extension ID: `kisstkondoros.vscode-gutter-preview`
+---
+
+## Recommended Installation Priority
+
+### **Must Have (Install First)** ✅
+1. **Python** (ms-python.python)
+2. **Pylance** (ms-python.vscode-pylance)
+3. **Python Debugger** (ms-python.debugpy)
+4. **GitLens** (eamodio.gitlens)
+
+### **Highly Recommended** ⭐
+5. **Black Formatter** (ms-python.black-formatter)
+6. **Pylint** (ms-python.pylint)
+7. **Path Intellisense** (christian-kohler.path-intellisense)
+8. **Todo Tree** (gruntfuggly.todo-tree)
+9. **Markdown All in One** (yzhang.markdown-all-in-one)
+10. **Image Preview** (kisstkondoros.vscode-gutter-preview)
+
+### **Quality of Life** 💡
+11. **Error Lens** (usernamehw.errorlens)
+12. **Better Comments** (aaron-bond.better-comments)
+13. **Color Highlight** (naumovs.color-highlight)
+14. **autoDocstring** (njpwerner.autodocstring)
+
+---
+
+**Note**: Extensions marked as "Optional" can be installed based on your specific workflow needs.

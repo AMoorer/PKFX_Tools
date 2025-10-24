@@ -3,6 +3,9 @@
 
 Write-Host "Building MakeSomeNoise executable..." -ForegroundColor Green
 
+# Change to root directory
+Set-Location $PSScriptRoot\..
+
 # Activate virtual environment
 .\venv\Scripts\Activate.ps1
 

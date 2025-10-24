@@ -1,5 +1,9 @@
 # Setup Python virtual environment for PKFX_Tools
 Write-Host "Creating virtual environment..." -ForegroundColor Cyan
+
+# Change to root directory
+Set-Location $PSScriptRoot\..
+
 python -m venv venv
 
 Write-Host "Activating virtual environment..." -ForegroundColor Cyan
