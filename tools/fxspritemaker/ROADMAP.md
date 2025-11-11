@@ -176,6 +176,14 @@ Common shortcuts to improve workflow:
 - JPG quality slider (for non-transparent exports)
 - Metadata embedding (tool version, parameters)
 
+### 7. Post processing
+**Priority**: Mid  
+**Complexity**: Mid
+
+- Convolution/filters (glow, blur, posterize, threshold)
+- Edge handling (edge fade and alpha vignette)
+- Color control and packing
+
 ---
 
 ## 🔮 Future Considerations (v1.3.x+)
