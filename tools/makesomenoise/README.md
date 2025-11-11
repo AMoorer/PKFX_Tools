@@ -145,6 +145,8 @@ makesomenoise/
 - **Built with**: PySide6, NumPy, noise, opensimplex, perlin-noise, Pillow
 - **Algorithm References**: Ken Perlin, Stefan Gustavson
 
+<img width="171" height="256" alt="AMcharQuestion_256" src="https://github.com/user-attachments/assets/551224e8-2cfd-48b1-8e85-9f72b21b73bf" />
+
 ---
 
 **Version**: 1.1.2  
