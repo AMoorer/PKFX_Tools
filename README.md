@@ -1,185 +1,124 @@
-# PKFX_Tools
+# PKFX Tools
 
-Tools and utilities for PKFX (PopcornFX) development.
+A collection of tools and utilities for PKFX (PopcornFX) and general VFX development.
 
-## 🎨 MakeSomeNoise - Procedural Noise Generator
+## 🛠️ Available Tools
 
-A powerful, user-friendly GUI tool for generating seamless procedural noise textures with real-time preview and animation support.
+### 🎨 [MakeSomeNoise](tools/makesomenoise/) - Procedural Noise Generator
 
-### ✨ Features
+A powerful GUI tool for generating seamless procedural noise textures with real-time preview and animation support.
 
-- **6 Noise Algorithms**: Perlin, Simplex, FBM, Turbulence, Ridged Multifractal, Domain Warp
-- **Seamless Tiling**: Industry-standard offset-based blending for perfect texture tiling
-- **Dual Layer Blending**: Mix two noise types with 7 blend modes (Mix, Add, Multiply, Screen, Overlay, Min, Max)
-- **Real-Time Preview**: Live preview with adjustable parameters and smooth animation playback
-- **Animation Support**: Generate animated texture atlases or frame sequences with Z-offset progression
-- **Multiple Export Formats**: Single frame, animation atlas, or file sequence
-- **3D Offset Controls**: Navigate through noise space with X/Y/Z offsets and adjustable sensitivity
-- **Preview Verification**: Center Seams mode to inspect seamless tiling quality
-- **Automatic Versioning**: Incremental version numbers (_v00, _v01...) prevent overwriting
-- **Educational Guide**: Built-in comprehensive guide with detailed algorithm explanations and history
+**Key Features:**
+- 6 noise algorithms (Perlin, Simplex, FBM, Turbulence, Ridged, Domain Warp)
+- Seamless tiling with adjustable blend width
+- Dual-layer blending with 7 blend modes
+- 3D offset controls and animation
+- Atlas and sequence export
 
-### 📥 Download
+[Download Latest Release](../../releases) | [View Documentation](tools/makesomenoise/README.md)
 
-**For End Users:**
+---
+
+### ✨ [VFX Sprite Maker](tools/fxspritemaker/) - Procedural Sprite Generator
+
+Create high-quality VFX sprites with full animation and color control.
+
+**Key Features:**
+- 10+ sprite types (Circle, Star, Particle, Lightning, Smoke, etc.)
+- Real-time parameter animation with multiple curves
+- Color animation with RGB transitions
+- Atlas export with flexible grid layouts
+- Export from 64×64 to 1024×1024+
+
+[Download Latest Release](../../releases) | [View Documentation](tools/fxspritemaker/README.md)
+
+---
+
+## 📥 Quick Start
+
+### For End Users
+
 1. Go to [Releases](../../releases)
-2. Download the latest `MakeSomeNoise.exe`
-3. Double-click to run - no installation required!
+2. Download the tool executable you need
+3. Run directly - no installation required!
 
 **Requirements:** Windows 10/11 (64-bit)
 
-### 🛠️ For Developers
+### For Developers
 
-#### Setup Development Environment
+Each tool has its own development environment:
 
 ```powershell
-# Clone the repository
+# Clone repository
 git clone https://github.com/AMoorer/PKFX_Tools.git
 cd PKFX_Tools
 
-# Run setup script (creates venv and installs dependencies)
+# Choose a tool
+cd tools/makesomenoise    # or tools/fxspritemaker
+
+# Setup environment
 .\scripts\setup_env.ps1
 
-# Launch the GUI
-.\scripts\run_noise_gui.ps1
+# Run the tool
+.\scripts\run_noise_gui.ps1    # or run_sprite_gui.ps1
 ```
 
-#### Build Executable
-
-```powershell
-# Quick build
-.\scripts\build_executable.ps1
-
-# Or manually
-.\venv\Scripts\Activate.ps1
-pyinstaller MakeSomeNoise.spec --clean
-```
-
-See [docs/BUILD_README.md](docs/BUILD_README.md) for detailed build instructions and troubleshooting.
-
-### 📖 Usage
-
-#### Basic Workflow
-
-1. **Select Noise Type**: Choose from Layer A dropdown
-2. **Adjust Parameters**: 
-   - Scale: Base frequency of noise
-   - Octaves: Level of detail (more = finer details)
-   - Persistence: How much each octave contributes
-   - Lacunarity: Frequency multiplier between octaves
-3. **Enable Seamless Tiling**: Check the box and adjust Blend Width (10-30%)
-4. **Preview Seams**: Toggle to visualize tiling with 50% offset
-5. **Export**: Click "Export Noise" and choose resolution & format
-
-#### Advanced Features
-
-**Layer Mixing:**
-- Set Layer B to a different noise type
-- Adjust Mix Weight slider (0=all A, 1=all B)
-- Choose blend mode for creative effects
-
-**Animation:**
-- Enable "Animated Output"
-- Set frame count and atlas layout
-- Adjust "Noise Anim Rate" for speed
-- Export creates an animated texture atlas
-
-**3D Navigation:**
-- Use X/Y/Z offset sliders to explore noise space
-- Adjust sensitivity for fine/coarse control
-- Perfect for finding interesting regions
-
-### 🎯 Use Cases
-
-- **Game Development**: Seamless terrain heightmaps, normal maps, detail textures
-- **VFX**: Procedural textures for materials and effects
-- **PopcornFX**: Custom texture inputs for particle effects
-- **Prototyping**: Quick texture generation for mockups
-
-### 📋 Noise Types
-
-| Type | Description | Best For |
-|------|-------------|----------|
-| **Perlin** | Classic smooth noise | Natural terrain, clouds |
-| **Simplex** | Improved Perlin, fewer artifacts | Modern terrain, organics |
-| **FBM** | Fractional Brownian Motion | Realistic terrain, mountains |
-| **Turbulence** | Absolute value FBM | Fire, smoke, energy effects |
-| **Ridged** | Inverted ridges | Mountain ridges, veins |
-| **Domain Warp** | Warped noise space | Twisted, organic patterns |
-
-*All noise types support 3D offset animation for temporal continuity*
-
-### 🐛 Troubleshooting
-
-**Executable won't start:**
-- Install [Visual C++ Redistributable](https://aka.ms/vs/17/release/vc_redist.x64.exe)
-- Check Windows Defender isn't blocking it
-- See [TROUBLESHOOT_EXE.md](TROUBLESHOOT_EXE.md)
-
-**Seams visible in tiled texture:**
-- Increase "Blend Width" to 15-30%
-- Use "Preview Seams" to verify
-- Ensure "Seamless Tiling" is enabled
-
-**Python script errors:**
-- Ensure virtual environment is activated
-- Reinstall dependencies: `pip install -r requirements.txt`
-
-### 🏗️ Project Structure
+## 🏗️ Repository Structure
 
 ```
 PKFX_Tools/
-├── src/
-│   └── makesomenoise/
-│       ├── __init__.py
-│       ├── __main__.py
-│       ├── noise_generator_gui.py   # Main application
-│       └── version.py
-├── scripts/
-│   ├── build_executable.ps1         # Build script
-│   ├── run_noise_gui.ps1           # Launch script
-│   └── setup_env.ps1               # Environment setup
-├── docs/
-│   ├── README.md                   # Documentation hub
-│   ├── BUILD_README.md             # Build instructions
-│   ├── CHANGELOG.md                # Version history
-│   ├── ROADMAP.md                  # Future plans
-│   ├── TROUBLESHOOT_EXE.md         # Troubleshooting
-│   └── archive/                    # Legacy files
-├── tests/                          # Future test suite
-├── .github/                        # GitHub workflows
-├── MakeSomeNoise.spec             # PyInstaller config
-├── requirements.txt               # Dependencies
-├── LICENSE                        # License information
-└── README.md                      # This file
+├── tools/
+│   ├── makesomenoise/         # Noise texture generator
+│   │   ├── src/
+│   │   ├── scripts/
+│   │   └── README.md
+│   └── fxspritemaker/         # VFX sprite generator
+│       ├── src/
+│       ├── scripts/
+│       └── README.md
+├── docs/                      # Shared documentation
+├── .github/                   # CI/CD workflows
+├── LICENSE
+└── README.md                  # This file
 ```
 
-### 🤝 Contributing
+## 🤝 Contributing
 
-Contributions are welcome! Please:
+Contributions are welcome! To add a new tool or improve existing ones:
+
 1. Fork the repository
 2. Create a feature branch
-3. Make your changes
-4. Submit a pull request
+3. Add your tool under `tools/yourtool/`
+4. Follow the existing structure (src/, scripts/, README.md)
+5. Update this main README to list your tool
+6. Submit a pull request
 
-### 📜 License
+## 📚 Documentation
+
+- **Tool-Specific Docs**: See each tool's README for detailed documentation
+- **Build Instructions**: Check `docs/BUILD_README.md`
+- **Troubleshooting**: See `docs/TROUBLESHOOT_EXE.md`
+- **Version History**: View tool-specific changelogs
+
+## 📜 License
 
 See [LICENSE](LICENSE) file for details.
 
-### 🙏 Credits
+## 🙏 Credits
 
 - **Author**: Andy Moorer
-- **Built with**: PySide6, NumPy, noise, opensimplex, perlin-noise, Pillow
-- **Algorithm References**: Ken Perlin, Stefan Gustavson
+- **Built with**: PySide6, NumPy, Pillow, noise libraries
+- **Purpose**: Tools for PKFX (PopcornFX) and VFX development
 
-### 📞 Support
+## 📞 Support
 
 - **Issues**: [GitHub Issues](../../issues)
 - **Discussions**: [GitHub Discussions](../../discussions)
 
 ---
 
-**Version**: 1.1.2  
-**Last Updated**: October 24, 2025
+**MakeSomeNoise**: v1.1.2  
+**VFX Sprite Maker**: v1.0.6  
+**Last Updated**: November 10, 2025
 
-See [docs/CHANGELOG.md](docs/CHANGELOG.md) for version history and release notes.
+See individual tool READMEs for detailed version history and changelogs.

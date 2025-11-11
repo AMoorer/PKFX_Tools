@@ -1,0 +1,16 @@
+# VFX Sprite Maker - Procedural Sprite Generator
+# Minimal requirements for running the application
+
+# UI Framework
+PySide6>=6.6.0
+
+# Core Dependencies
+numpy>=1.26.0
+Pillow>=10.0.0
+scipy>=1.11.0
+
+# Optional Development Tools
+# Uncomment if doing development work:
+# black>=23.0.0        # Code formatter
+# pylint>=3.0.0        # Linter
+# pytest>=7.4.0        # Testing framework

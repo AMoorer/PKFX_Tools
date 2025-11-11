@@ -1,17 +1,23 @@
-# MakeSomeNoise - Procedural Noise Generator
-# Minimal requirements for running the application
+# PKFX Tools - Consolidated Requirements
+# Includes dependencies for all tools in the repository
 
-# UI Framework
+# UI Framework (Required by all tools)
 PySide6>=6.6.0
 
-# Core Dependencies
+# Core Dependencies (Required by all tools)
 numpy>=1.26.0
 Pillow>=10.0.0
 
-# Procedural Noise Libraries
+# MakeSomeNoise - Noise generation libraries
 noise>=1.2.2           # Perlin noise
 opensimplex>=0.4.5     # Simplex noise
 perlin-noise>=1.12     # Additional noise algorithms
+
+# VFX Sprite Maker - Scientific computing
+scipy>=1.11.0          # Scientific computing utilities
+
+# Build Tool
+pyinstaller>=6.0.0     # For creating executables
 
 # Development Tools (Optional)
 # Uncomment if doing development work:
