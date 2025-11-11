@@ -190,58 +190,15 @@ Common shortcuts to improve workflow:
 
 ### Advanced Features
 - **3D Sprites**: Simple 3D primitives (sphere, cube) with lighting
-- **Layering System**: Composite multiple sprite types
-- **Blend Modes**: Apply blend modes between layers
+- **6-way lighting**
+- **Additional maps** Alpha remap, grads, normal, depth
 - **Custom Shaders**: GLSL shader support for advanced users
-- **Video Export**: Export animations as .mp4/.gif
 - **Python Scripting**: Scriptable parameter automation
 
 ### Integration Features
 - **Plugin System**: Community-contributed sprite types
 - **API Mode**: Command-line batch processing
-- **Unity/Unreal Plugins**: Direct export to engine formats
-- **Real-time Preview in Engine**: Live-link to game engine
-
-### Performance & Optimization
-- **GPU Acceleration**: Leverage GPU for rendering
-- **Multi-threading**: Parallel frame generation
-- **Memory Optimization**: Handle larger atlases (4K+)
-
----
-
-## 📊 Version Planning
-
-### v1.0.7 (Quick Wins)
-- Keyboard shortcuts
-- Recent colors palette
-- Copy/paste parameters
-- Grid overlay in preview
-
-### v1.0.8 (Presets & Export)
-- Parameter preset system
-- Batch resolution export
-- Export format options
-
-### v1.0.9 (Preview Polish)
-- Zoom and pan controls
-- Background pattern options
-- Enhanced color picker with hex input
-
-### v1.1.0 (Animation Curves)
-- Noise curve type
-- Spring curve type
-- Bounce curve type
-- Multi-step animation (N steps)
-
-### v1.2.0 (New Sprite Types)
-- SDF primitives (Circle, Box, Polygon, Star)
-- Pattern generators (Grid, Radial, Voronoi)
-- Random splatting system
-
-### v1.3.0 (Asset Import)
-- Icon atlas generator (.ico import)
-- Font to sprite sheet converter
-- N-Gon and Star geometry improvements
+- AI support including CLI tools to Claude skills and MCP
 
 ---
 
@@ -251,6 +208,8 @@ Feature requests and suggestions are welcome! Please open an issue on GitHub wit
 - **Feature Description**: What you'd like to see
 - **Use Case**: How you'd use it
 - **Priority**: How important it is to your workflow
+
+<img width="171" height="256" alt="AMcharHappy_Square256" src="https://github.com/user-attachments/assets/9b2b72de-2980-4cab-966d-cc8dbcda9a7e" />
 
 ---
 
@@ -265,4 +224,4 @@ Feature requests and suggestions are welcome! Please open an issue on GitHub wit
 
 ---
 
-*This roadmap is subject to change based on development priorities, community feedback, and technical feasibility.*
+*This roadmap is subject to change based on development priorities, community feedback, technical feasibility and the entirely unpredictable whims of the author who needs to spend less time coding and more time hanging out with his rescue dogs.*
