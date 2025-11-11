@@ -15,7 +15,7 @@ This document outlines planned features and improvements for VFX Sprite Maker. F
 **Priority**: High  
 **Complexity**: Medium
 
-Add procedural animation curve types beyond the current interpolation options:
+Add parametric animation curve types beyond the current interpolation options:
 
 - **Noise Curves**: Perlin/Simplex noise-driven parameter animation
   - Noise frequency and amplitude controls
