@@ -81,6 +81,7 @@ Extend "Stepped" curve to support N steps instead of single step:
   - Improved gradient algorithms
   - Better softness/feathering quality
   - Optimized rendering performance
+  - Additional types may include snowflake maker, runes, splash shapes
 
 ---
 
